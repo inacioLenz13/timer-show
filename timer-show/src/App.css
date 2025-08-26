@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif; /* fonte padrão do site */
 }
 
 .app {
@@ -22,8 +22,10 @@
 }
 
 .header .logo {
+  font-family: "Sancreek", cursive; /* fonte estilizada só no logo */
   font-weight: bold;
   font-size: 2.5rem;
+  letter-spacing: 1px;
 }
 
 /* Banner */
@@ -48,7 +50,6 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-
 }
 
 .buy-button {
@@ -56,16 +57,18 @@
   border: none;
   padding: 18px 22px;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
+  font-family: "Poppins", sans-serif; /* garante que o botão siga a fonte padrão */
 }
 
 .buy-button:hover {
   background-color: #a76c29;
 }
 
+/* Video */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;

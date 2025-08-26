@@ -1,12 +1,23 @@
 import React from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import banner from "./assets/banner.png";
+import Localizar from "./localizar";
 
-function App() {
+function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="app">
-        <header className="header">
+        <header
+          className="header"
+          style={{
+            padding: "20px",
+            background: "linear-gradient(to right, #e29d1b, #fd8700)",
+            color: "#fff",
+          }}
+        >
           <div className="logo">TimerShow</div>
           <div className="nav"></div>
         </header>
@@ -14,7 +25,12 @@ function App() {
         <main className="banner-container">
           <img src={banner} alt="ChiShow Festival 2025" className="banner" />
           <div className="banner-content">
-            <button className="buy-button">LOCALIZAR</button>
+            <button
+              className="buy-button"
+              onClick={() => navigate("/localizar")}
+            >
+              LOCALIZAR
+            </button>
           </div>
         </main>
       </div>
@@ -33,6 +49,15 @@ function App() {
         </div>
       </section>
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/localizar" element={<Localizar />} />
+    </Routes>
   );
 }
 
