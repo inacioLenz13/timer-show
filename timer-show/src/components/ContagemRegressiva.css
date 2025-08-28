@@ -1,0 +1,13 @@
+.timer-container {
+  text-align: center;
+  background-color: #fff3e0;
+  padding: 30px;
+  margin-top: 0;
+}
+
+.contador {
+  font-size: 2em;
+  font-weight: bold;
+  color: #e65100;
+  margin-top: 10px;
+}

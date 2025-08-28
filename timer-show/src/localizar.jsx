@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "./components/Header"; // agora deve funcionar ✅
+import Header from "./components/Header";
+import ContagemRegressiva from "./components/ContagemRegressiva";
 
 function Localizar() {
   const localLatitude = -23.5275;
@@ -9,9 +10,19 @@ function Localizar() {
   return (
     <>
       <Header />
+
+      {/* CONTAGEM REGRESSIVA LOGO APÓS O HEADER */}
+      <div style={{ padding: "20px", textAlign: "center" }}>
+        <ContagemRegressiva />
+      </div>
+
+      {/* INFORMAÇÕES DO LOCAL DO SHOW */}
       <div style={{ padding: "20px", textAlign: "center" }}>
         <h1>🎤 Local do Show</h1>
-        <p>O grande evento acontecerá no <b>Allianz Parque - São Paulo</b>.</p>
+        <p>
+          O grande evento acontecerá no <b>Allianz Parque - São Paulo</b>.
+        </p>
+
         <iframe
           title="Mapa do Show"
           width="100%"
@@ -21,6 +32,7 @@ function Localizar() {
           allowFullScreen
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.081632463614!2d-46.68022462382724!3d-23.52752256031154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5762b7c9784d%3A0xb5c9e30b7e7f63b3!2sAllianz%20Parque!5e0!3m2!1spt-BR!2sbr!4v1693140985115!5m2!1spt-BR!2sbr"
         ></iframe>
+
         <br />
         <a
           href={googleMapsLink}

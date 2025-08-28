@@ -3,6 +3,9 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import banner from "./assets/banner.png";
 import Localizar from "./localizar";
+import ContagemRegressiva from "./components/ContagemRegressiva";
+
+
 
 function Home() {
   const navigate = useNavigate();
